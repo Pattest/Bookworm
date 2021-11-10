@@ -13,6 +13,7 @@
 		2750CAB4273C2B3C001241ED /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2750CAB3273C2B3C001241ED /* Preview Assets.xcassets */; };
 		2750CAB6273C2B3C001241ED /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2750CAB5273C2B3C001241ED /* Persistence.swift */; };
 		2750CAB9273C2B3C001241ED /* Bookworm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2750CAB7273C2B3C001241ED /* Bookworm.xcdatamodeld */; };
+		2750CAC0273C2D4E001241ED /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2750CABF273C2D4E001241ED /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2750CAB3273C2B3C001241ED /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2750CAB5273C2B3C001241ED /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		2750CAB8273C2B3C001241ED /* Bookworm.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Bookworm.xcdatamodel; sourceTree = "<group>"; };
+		2750CABF273C2D4E001241ED /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				2750CAB5273C2B3C001241ED /* Persistence.swift */,
 				2750CAB7273C2B3C001241ED /* Bookworm.xcdatamodeld */,
 				2750CAB2273C2B3C001241ED /* Preview Content */,
+				2750CABF273C2D4E001241ED /* README.md */,
 			);
 			path = Bookworm;
 			sourceTree = "<group>";
@@ -131,6 +134,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2750CAC0273C2D4E001241ED /* README.md in Resources */,
 				2750CAB4273C2B3C001241ED /* Preview Assets.xcassets in Resources */,
 				2750CAB1273C2B3C001241ED /* Assets.xcassets in Resources */,
 			);
