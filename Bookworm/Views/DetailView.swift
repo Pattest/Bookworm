@@ -20,10 +20,10 @@ struct DetailView: View {
         GeometryReader { geometry in
             VStack {
                 ZStack(alignment: .bottomTrailing) {
-                    Image(self.book.genre ?? "Fantasy")
+                    Image(book.genre ?? "Fantasy")
                         .frame(maxWidth: geometry.size.width)
 
-                    Text(self.book.genre?.uppercased() ?? "FANTASY")
+                    Text(book.genre?.uppercased() ?? "FANTASY")
                         .font(.caption)
                         .fontWeight(.black)
                         .padding(8)
@@ -33,15 +33,23 @@ struct DetailView: View {
                         .offset(x: -5, y: -5)
                 }
 
-                Text(self.book.author ?? "Unknown author")
+                Text(book.author ?? "Unknown author")
                     .font(.title)
                     .foregroundColor(.secondary)
 
-                Text(self.book.review ?? "No review")
+                Text(book.review ?? "No review")
                     .padding()
 
-                RatingView(rating: .constant(Int(self.book.rating)))
+                RatingView(rating: .constant(Int(book.rating)))
                     .font(.largeTitle)
+
+                HStack {
+                    Text(book.addingDate ?? Date.now,
+                         formatter: getDateFormatter())
+                    Spacer()
+                }
+                .font(.subheadline)
+                .padding()
 
                 Spacer()
             }
@@ -49,22 +57,27 @@ struct DetailView: View {
         .navigationTitle(book.title ?? "Unknown Book")
         .alert(isPresented: $showingDeleteAlert) {
             Alert(title: Text("Delete book"), message: Text("Are you sure?"), primaryButton: .destructive(Text("Delete")) {
-                    self.deleteBook()
+                    deleteBook()
                 }, secondaryButton: .cancel()
             )
         }
         .navigationBarItems(trailing: Button(action: {
-            self.showingDeleteAlert = true
+            showingDeleteAlert = true
         }) {
             Image(systemName: "trash")
         })
     }
 
+    func getDateFormatter() -> DateFormatter {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .short
+        return dateFormatter
+    }
+
     func deleteBook() {
         moc.delete(book)
-
-        // uncomment this line if you want to make the deletion permanent
-         try? self.moc.save()
+        try? self.moc.save()
         presentationMode.wrappedValue.dismiss()
     }
 }

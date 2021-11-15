@@ -11,6 +11,8 @@ struct AddBookView: View {
     @Environment(\.managedObjectContext) var moc
     @Environment(\.presentationMode) var presentationMode
 
+    @State private var showingMissingGenre = false
+
     @State private var title = ""
     @State private var author = ""
     @State private var rating = 3
@@ -40,19 +42,30 @@ struct AddBookView: View {
 
                 Section {
                     Button("Save") {
-                        let newBook = Book(context: self.moc)
-                        newBook.title = self.title
-                        newBook.author = self.author
-                        newBook.rating = Int16(self.rating)
-                        newBook.genre = self.genre
-                        newBook.review = self.review
+                        if genre.isEmpty {
+                            showingMissingGenre = true
+                            return
+                        }
 
-                        try? self.moc.save()
-                        self.presentationMode.wrappedValue.dismiss()
+                        let newBook = Book(context: moc)
+                        newBook.title = title
+                        newBook.author = author
+                        newBook.rating = Int16(rating)
+                        newBook.genre = genre
+                        newBook.review = review
+                        newBook.addingDate = Date.now
+
+                        try? moc.save()
+                        presentationMode.wrappedValue.dismiss()
                     }
                 }
             }
             .navigationTitle("Add Book")
+            .alert(isPresented: $showingMissingGenre) {
+                Alert(title: Text("/!\\"),
+                      message: Text("You must choose a genre."),
+                      dismissButton: .cancel())
+            }
         }
     }
 }
