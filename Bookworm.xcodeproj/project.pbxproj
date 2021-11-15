@@ -17,6 +17,7 @@
 		2781BE4A27427A3A00F16ADC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781BE4927427A3A00F16ADC /* RatingView.swift */; };
 		2781BE4C2742863E00F16ADC /* EmojiRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781BE4B2742863E00F16ADC /* EmojiRatingView.swift */; };
 		2781BE4E27428C9600F16ADC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781BE4D27428C9600F16ADC /* Persistence.swift */; };
+		2781BE502742962800F16ADC /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2781BE4F2742962800F16ADC /* DetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2781BE4927427A3A00F16ADC /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		2781BE4B2742863E00F16ADC /* EmojiRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiRatingView.swift; sourceTree = "<group>"; };
 		2781BE4D27428C9600F16ADC /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		2781BE4F2742962800F16ADC /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			children = (
 				2750CAAE273C2B37001241ED /* ContentView.swift */,
 				2781BE462742752500F16ADC /* AddBookView.swift */,
+				2781BE4F2742962800F16ADC /* DetailView.swift */,
 				2781BE4B2742863E00F16ADC /* EmojiRatingView.swift */,
 				2781BE4927427A3A00F16ADC /* RatingView.swift */,
 			);
@@ -165,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2750CAB9273C2B3C001241ED /* Bookworm.xcdatamodeld in Sources */,
+				2781BE502742962800F16ADC /* DetailView.swift in Sources */,
 				2750CAAF273C2B37001241ED /* ContentView.swift in Sources */,
 				2750CAAD273C2B37001241ED /* BookwormApp.swift in Sources */,
 				2781BE4E27428C9600F16ADC /* Persistence.swift in Sources */,

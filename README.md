@@ -6,7 +6,7 @@
 
 Eleventh project of [100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)
 
-This project is an application to track which books you’ve read and what you thought of them
+This project is an application to track which books you’ve read and what you thought of them.
 
 ## Development guidelines
 
